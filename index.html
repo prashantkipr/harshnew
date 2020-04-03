@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Recorder.js demo for uploading multiple files </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <style>
+      .recording{
+        background: orange;
+        animation: example 1s ease infinite;
+        animation-direction: alternate;
+      }
+      @keyframes example {
+        from   {background-color: orange;}
+        to  {background-color: orangered;}
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <h2>Questionnaire</h2>
+      <div class="card-group">
+        <div class="container">
+
+          <div class="card">
+            <div class="card-header">
+              Personal Details
+            </div>
+            <div class="card-body">
+                <div class="row">
+                  <div class="col">Name</div>
+                  <div class="col"><input id="usernameTxtInput" type="text" name="username"></div>
+                </div>
+                <div class="row">
+                  <div class="col">Age</div>
+                  <div class="col"><input id="ageTxtInput" type="text" name="Age"></div>
+                </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Health Details
+            </div>
+            <div class="card-body">
+                <div class="row">
+                  <div class="col">Temperature</div>
+                  <div class="col"><input id="temperatureTxtInput" type="text" name="temperature"></div>
+                </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              Cough
+            </div>
+            <div class="card-body">
+                <p> Click the microphone to start recording, cough 3 times, then click again to stop recording. 
+                <input id="coughFile" type="file" style="visibility: hidden; white-space: nowrap;">
+                <br>Or alternatively, <button class="btn btn-outline-dark coughUploadBtn" onclick="$('#coughFile').click();"><i class="fas fa-upload"> Upload</i></button> manually.</p>
+                <div id="coughRecordControl">
+                  <div class="row justify-content-start">
+                    <div class="col">
+                      <button type="button" class="btn btn-outline-dark recorder"><i class="fas fa-microphone"> Record</i></button>
+                    </div>
+                    <div class="recording-indicator col" style="display:none; white-space: nowrap;">
+                      <div class="spinner-border text-primary" role="status"></div>
+                      Recording
+                    </div>
+                    <div class="audio-playback col" style="display:none;">
+                      <audio controls="controls"></audio>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="card">
+              <div class="card-header">
+                AAA
+              </div>
+              <div class="card-body">
+                  <p> Press the record button and say 'aaa' for as long as you can (i.e. same as the 'aaa' sound in the word 'car' or 'far'). 
+                  <input id="aaaFile" type="file" style="visibility: hidden; white-space: nowrap;">
+                  <br>Or alternatively, <button class="btn btn-outline-dark aaaUploadBtn" onclick="$('#aaaFile').click();"><i class="fas fa-upload"> Upload</i></button> manually.</p>
+                  <div id="aaaRecordControl">
+                      <div class="row justify-content-start">
+                          <div class="col">
+                              <button type="button" class="btn btn-outline-dark recorder"><i class="fas fa-microphone"> Record</i></button>
+                          </div>
+                          <div class="recording-indicator col" style="display:none; white-space: nowrap;">
+                              <div class="spinner-border text-primary" role="status"></div>
+                              Recording
+                          </div>
+                          <div class="audio-playback col" style="display:none;">
+                              <audio controls="controls"></audio>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container">
+            <div class="card">
+              <div class="card-header">
+                EEE
+              </div>
+              <div class="card-body">
+                  <p> Press the record button and say 'eee' for as long as you can (i.e. same as the 'eee' sound in the word 'cheese' or 'feet'). 
+                  <input id="eeeFile" type="file" style="visibility: hidden; white-space: nowrap;">
+                  <br>Or alternatively, <button class="btn btn-outline-dark eeeUploadBtn" onclick="$('#eeeFile').click();"><i class="fas fa-upload"> Upload</i></button> manually.</p>
+                  <div id="eeeRecordControl">
+                    <div class="row justify-content-start">
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark recorder"><i class="fas fa-microphone"> Record</i></button>
+                      </div>
+                      <div class="recording-indicator col" style="display:none; white-space: nowrap;">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        Recording
+                      </div>
+                      <div class="audio-playback col" style="display:none;">
+                        <audio controls="controls"></audio>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="card">
+                <div class="card-header">
+                  OOO
+                </div>
+                <div class="card-body">
+                  <p> Press the record button and say 'ooo' for as long as you can (i.e. same as the 'ooo' sound in the word 'boot' or 'food'). 
+                  <input id="oooFile" type="file" style="visibility: hidden; white-space: nowrap;">
+                  <br>Or alternatively, <button class="btn btn-outline-dark oooUploadBtn" onclick="$('#oooFile').click();"><i class="fas fa-upload"> Upload</i></button> manually.</p>
+                  <div id="oooRecordControl">
+                    <div class="row justify-content-start">
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark recorder"><i class="fas fa-microphone"> Record</i></button>
+                      </div>
+                      <div class="recording-indicator col" style="display:none; white-space: nowrap;">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        Recording
+                      </div>
+                      <div class="audio-playback col" style="display:none;">
+                        <audio controls="controls"></audio>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="card">
+                <div class="card-header">
+                  Count
+                </div>
+                <div class="card-body">
+                  <p> Click the microphone to start recording, count from 1 to 20, then click again to stop recording. 
+                  <input id="countFile" type="file" style="visibility: hidden; white-space: nowrap;">
+                  <br>Or alternatively, <button class="btn btn-outline-dark countUploadBtn" onclick="$('#countFile').click();"><i class="fas fa-upload"> Upload</i></button> manually.</p>
+                  <div id="countRecordControl">
+                    <div class="row justify-content-start">
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark recorder"><i class="fas fa-microphone"> Record</i></button>
+                      </div>
+                      <div class="recording-indicator col" style="display:none; white-space: nowrap;">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        Recording
+                      </div>
+                      <div class="audio-playback col" style="display:none;">
+                        <audio controls="controls"></audio>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="card">
+                <div class="card-header">
+                  Alphabet
+                </div>
+                <div class="card-body">
+                  <p> Press the record button and say the alphabet from a to z (a b c d e f g h i j k l m n o p q r s t u v w x y z).
+                  <input id="azFile" type="file" style="visibility: hidden; white-space: nowrap;">
+                  <br>Or alternatively, <button class="btn btn-outline-dark alphabetUploadBtn" onclick="$('#azFile').click();"><i class="fas fa-upload"> Upload</i></button> manually.</p>
+                  <div id="alphabetRecordControl">
+                    <div class="row justify-content-start">
+                      <div class="col">
+                        <button type="button" class="btn btn-outline-dark recorder"><i class="fas fa-microphone"> Record</i></button>
+                      </div>
+                      <div class="recording-indicator col" style="display:none; white-space: nowrap;">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        Recording
+                      </div>
+                      <div class="audio-playback col" style="display:none;">
+                        <audio controls="controls"></audio>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="card">
+                <div class="card-header">
+                  Declaration
+                </div>
+                <div class="card-body">
+                  <p> By clicking the submit button, I understand its purpose and agree to submitting this data (including voice recordings) for research purpose.</p>
+                  <button id="submitFormButton" type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+
+      </div>
+    </div>
+	
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>    
+    <script src="/js/recorder.js"></script>
+    <script src="/js/for_recording.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#submitFormButton").on('click', function(evt){
+          evt.preventDefault();
+          let inputs = $('body').find(':input');
+          console.log(inputs);
+          // This will be a good place to validate all inputs
+          // any if they are not suitable, set focus to the first invalid one 
+          // and return from the function
+          // else: prepare and send the form to the server
+          var fd = new FormData();
+
+          var username = $("#usernameTxtInput").val();
+          var age = $("#ageTxtInput").val();
+          var temperature = $("#temperatureTxtInput").val();
+          
+          fd.set("username", username);
+          fd.set("age", age);
+          fd.set("temperature", temperature);
+
+          // set from recorded audio file if provided
+          if (audio_cough != null){
+            fd.set("audio_cough",audio_cough);
+          }
+          if(audio_count != null){
+            fd.set("audio_count",audio_count);
+          }
+          if(audio_aaa != null){
+            fd.set("audio_aaa",audio_aaa);
+          }
+          if(audio_eee != null){
+            fd.set("audio_eee",audio_eee);
+          }
+          if(audio_ooo != null){
+            fd.set("audio_ooo",audio_ooo);
+          }
+          if(audio_az != null){
+            fd.set("audio_az",audio_az);
+          }
+
+          // set from uploaded audio file if provided
+          if ($("#coughFile")[0].files.length==1){
+            var file = $("#coughFile")[0].files[0]
+            fd.set('audio_cough', file, file.name);
+          }
+          if ($("#aaaFile")[0].files.length==1){
+            var file = $("#aaaFile")[0].files[0]
+            fd.set('audio_aaa', file, file.name);
+          }
+          if ($("#eeeFile")[0].files.length==1){
+            var file = $("#eeeFile")[0].files[0]
+            fd.set('audio_eee', file, file.name);
+          }
+          if ($("#oooFile")[0].files.length==1){
+            var file = $("#oooFile")[0].files[0]
+            fd.set('audio_ooo', file, file.name);
+          }
+          if ($("#countFile")[0].files.length==1){
+            var file = $("#countFile")[0].files[0]
+            fd.set('audio_count', file, file.name);
+          }
+          if ($("#azFile")[0].files.length==1){
+            var file = $("#azFile")[0].files[0]
+            fd.set('audio_az', file, file.name);
+          }
+          
+
+          $.ajax({
+            url: '/upload.php',
+            type: 'POST',
+            data: fd,
+            processData: false,
+            contentType: false,
+          }).done(function(data){
+            console.log('done');
+            console.log(data);
+            alert('success!')
+            // TODO: reset the form here or redirect to another page
+          }).fail(function(err){
+            console.log('err');
+            console.log(err);
+            alert('error!')
+          })
+
+        });
+      });
+    </script>
+  </body>
+</html>

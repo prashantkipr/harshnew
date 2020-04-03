@@ -1,0 +1,117 @@
+Array
+(
+    [username] => 
+    [age] => 43
+    [temperature] => 
+)
+Array
+(
+    [username] => 
+    [age] => 
+    [temperature] => 
+)
+Array
+(
+    [username] => harsh
+    [age] => 30
+    [temperature] => 97F
+)
+Array
+(
+    [username] => harsh
+    [age] => 30
+    [temperature] => 97F
+)
+Array
+(
+    [audio_cough] => Array
+        (
+            [name] => blob
+            [type] => audio/wav
+            [tmp_name] => /tmp/phplBvNeG
+            [error] => 0
+            [size] => 65580
+        )
+
+    [audio_count] => Array
+        (
+            [name] => blob
+            [type] => audio/wav
+            [tmp_name] => /tmp/phpSw8HnC
+            [error] => 0
+            [size] => 57388
+        )
+
+    [audio_aaa] => Array
+        (
+            [name] => blob
+            [type] => audio/wav
+            [tmp_name] => /tmp/phpXd4Dwy
+            [error] => 0
+            [size] => 57388
+        )
+
+    [audio_ooo] => Array
+        (
+            [name] => blob
+            [type] => audio/wav
+            [tmp_name] => /tmp/phpS0aBFu
+            [error] => 0
+            [size] => 49196
+        )
+
+    [audio_az] => Array
+        (
+            [name] => blob
+            [type] => audio/wav
+            [tmp_name] => /tmp/phplHlzOq
+            [error] => 0
+            [size] => 49196
+        )
+
+)
+Array
+(
+    [username] => harsh
+    [age] => 30
+    [temperature] => 97F
+)
+Array
+(
+    [audio_cough] => Array
+        (
+            [name] => blob
+            [type] => audio/wav
+            [tmp_name] => /tmp/php44rinH
+            [error] => 0
+            [size] => 180268
+        )
+
+)
+Array
+(
+    [username] => 
+    [age] => 
+    [temperature] => 
+)
+Array
+(
+)
+Array
+(
+    [username] => 
+    [age] => 
+    [temperature] => 
+)
+Array
+(
+    [audio_cough] => Array
+        (
+            [name] => NP_interview2.wav
+            [type] => audio/wav
+            [tmp_name] => /tmp/phpjuHdCD
+            [error] => 0
+            [size] => 6014
+        )
+
+)
